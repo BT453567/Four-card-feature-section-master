@@ -1,0 +1,149 @@
+:root {
+  /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  /* Neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+@font-face {
+  font-family: "poppins-extra-light-200";
+  src: url(../assets/fonts/poppins/Poppins-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "poppins-regular-400";
+  src: url(../assets/fonts/poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "poppins-semi-bold-600";
+  src: url(../assets/fonts/poppins/Poppins-SemiBold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray);
+  color: var(----Grayish-Blue);
+}
+
+p {
+  font-family: 'poppins-regular-400';
+}
+
+h2, h3, h4, h5 {
+  font-family: "poppins-semi-bold-600";
+  font-size: 1.2rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.heading-container {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+}
+
+.sub-heading {
+  font-family: 'poppins-extra-light-200';
+  font-size: 2rem;
+  color: var(--Grayish-Blue);
+}
+
+.heading {
+  font-family: 'poppins-semi-bold-600';
+  font-size: 2rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.heading-content {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.four-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.column-1, .column-3 {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  padding: 30px 30px;
+  margin: 15px;
+  max-width: 22rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  perspective: 800px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 10px 10px 0 0;
+}
+
+.super-card::before {
+  background-color: var(--Cyan);
+}
+
+.team-card::before {
+  background-color: var(--Red);
+}
+
+.calc-card::before {
+  background-color: var(--Blue);
+}
+
+.karma-card {
+  margin-top: 25px;
+}
+
+.karma-card::before {
+  background-color: var(--Orange);
+}
+
+.p-card {
+  margin-top: 10px;
+}
+
+.img-container {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .four-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .karma-card {
+    margin-top: 30px;
+  }
+
+
+}
